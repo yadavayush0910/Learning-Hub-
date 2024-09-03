@@ -1,0 +1,97 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://img.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_1258-28313.jpg'); /* Your background image URL */
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.8;
+    transition: opacity 0.3s ease; /* Transition for background opacity */
+}
+
+.background:hover {
+    opacity: 0.9; /* Increase opacity on hover */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Add box-shadow transition */
+}
+
+.card:hover {
+    transform: rotate(36deg) skew(-9deg); /* Rotate 15 degrees and skew -18 degrees on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Increase box-shadow on hover */
+}
+
+.card img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: transform 0.5s ease, opacity 2s ease-in-out; /* Add opacity transition */
+    animation: fadeInOut 4s infinite; /* Apply the fade in/out animation */
+}
+
+.card:hover img {
+    transform: translateY(-5%);
+}
+
+.info {
+    padding: 20px;
+}
+
+.info h3 {
+    color: #333;
+    font-size: 24px; /* Increase font size for better readability */
+    margin: 0 0 10px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); /* Add text shadow */
+    transition: color 0.5s ease, font-size 0.5s ease; /* Add transition for font size */
+}
+
+.card:hover .info h3 {
+    color: #ff6f61; /* Change to your desired hover color */
+}
+
+.info p {
+    color: #666;
+    font-size: 16px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #4b839b;
+}
+
+/* Keyframe animation for fading in and out */
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0; /* Start and end with opacity 0 */
+    }
+    50% {
+        opacity: 1; /* Peak opacity in the middle */
+    }
+}
